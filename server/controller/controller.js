@@ -13,9 +13,14 @@ module.exports = {
     getProducts: (req, res) => {
        const db = req.app.get('db');
         console.log('get')
+
+       if (req.params.id){
+       db.get_product(req.params.id).then(product => {
+           res.status(200).json(product)
+       })}else {
        db.get_products().then(products => {
            res.status(200).json(products)
-       })
+       })}
     },
 
     editProduct: (req, res) => {

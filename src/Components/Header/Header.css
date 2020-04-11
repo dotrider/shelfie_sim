@@ -1,3 +1,8 @@
 .header {
     background-color: #AB2918;
+    height: 40px;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    font-size: 2rem;
 }
