@@ -27,8 +27,8 @@ module.exports = {
         const db = req.app.get('db');
         const { name, price, image} = req.body;
         const { id } = req.params;
-
-        db.edit_product(name, price, image, id).then(product => {
+        console.log('edit backend', req)
+        db.edit_product([name, price, image, id]).then(product => {
             res.status(200).json(product)
         })
 
@@ -37,7 +37,7 @@ module.exports = {
 
     deleteProduct: (req, res) => {
         const db = req.app.get('db');
-        console.log(req.params.id)
+        console.log('delete', req.params.id)
         db.delete_product(req.params.id).then(product => {
             res.status(200).json(product)
         })

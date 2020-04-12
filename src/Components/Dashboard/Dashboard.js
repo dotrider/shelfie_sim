@@ -24,12 +24,6 @@ const deleteItem = (id) => {
     setInventory(res.data)
   }).catch(err => console.log(err))
 }
-//Edit
-// const editProduct = (id, product) => {
-//   axios.put(`/api/product/${id}`, product).then(res => {
-//     setInventory(res.data)
-//   }).catch(res => console.log(res))
-// }
 
 const mappedInventoy = inventory.map(product => {
             return <Product product={product} key={product.id} deleteItem={deleteItem}/>
