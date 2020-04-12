@@ -1,19 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, withRouter} from 'react-router-dom'
 import './Product.css';
 
 const Product = (props) => {
     const {name, price, img, id} = props.product
-    // console.log('props',props)
+    console.log('propsProduct',props)
     return(
-        <section className='product'>
-            <img alt='Product Image' src={img}/>
-            <p>{name}</p>
-            <p>{price}</p>
-            <button onClick={() => props.deleteItem(id)} >Delete</button>
-            <Link to={`/edit/${id}`}><button>Edit</button></Link> 
+        <section className='products'>
+            <div className='product'>
+                <img alt='Product Image' src={img}/>
+                <p>{name}</p>
+                <p>{price}</p>
+                <button onClick={() => props.deleteItem(id)} >Delete</button>
+                <Link to={`/edit/`}><button>Edit</button></Link>
+            </div>
         </section>
     )
 }
 
-export default Product
+export default withRouter(Product)

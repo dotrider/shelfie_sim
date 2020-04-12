@@ -2,4 +2,7 @@
     background-color: #3BD786;
     height: 200px;
     width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
 }

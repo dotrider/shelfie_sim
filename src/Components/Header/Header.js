@@ -10,7 +10,7 @@ const Header = () => {
         <section className='header'>
            <h1>SHELFIE</h1>
            <Link to='/'>Dashboard</Link>
-            <Link to='/add'>Add</Link>
+           <Link to='/add'>Add</Link>
         </section>
     )
 }

@@ -4,7 +4,7 @@ module.exports = {
     addProduct: (req, res) => {
         const { name, price , image} = req.body;
         const db = req.app.get('db');
-        console.log('hit', req.body)
+        console.log('hit Add', req.body)
         db.add_product([name, price, image]).then(product => {
             res.status(200).json(product)
         })
