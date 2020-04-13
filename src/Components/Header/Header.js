@@ -9,8 +9,11 @@ const Header = () => {
     return(
         <section className='header'>
            <h1>SHELFIE</h1>
-           <Link to='/'>Dashboard</Link>
-           <Link to='/add'>Add</Link>
+
+           <div className='links'>
+               <Link to='/'><span>Dashboard</span></Link>
+                <Link to='/add'><span>Add</span></Link>
+           </div>
         </section>
     )
 }

@@ -1,16 +1,31 @@
 .products {
     background-color: white;
     padding: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .product {
     background-color: #D34735;
-    width: 400px;
-    margin: 0 auto;
+    width: 500px;
+    height: 250px;
     padding: 10px;
     border-radius: 15px;
+    display: flex;
 }
 
 img {
     height: 250px;
+    border-radius: 5px;
+}
+
+.buttonContainer {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.productInfo {
 }

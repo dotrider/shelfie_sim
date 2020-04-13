@@ -1,8 +1,43 @@
 .form {
+    padding: 50px;
+}
+
+.productForm {
     background-color: #3BD786;
     height: 200px;
-    width: 200px;
+    width: 400px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.formBtns {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.formInfo {
+    padding: 20px;
+}
+
+.formInfo > input {
+    width: 350px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+}
+p {
+    text-align: left;
+    /* padding: 5px; */
+}
+
+
+#addBtn {
+    width: 125px;
+}
+
+.btn{
+    background-color: #ED6B5A;
 }

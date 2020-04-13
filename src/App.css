@@ -3,7 +3,14 @@
 .App {
   text-align: center;
 }
-
+button {
+  background-color: #4BDB90;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  width: 80px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

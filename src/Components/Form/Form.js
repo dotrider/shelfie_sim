@@ -10,7 +10,7 @@ const Form = (props) => {
 useEffect(() => {
     // console.log('props.match.params', props.match.params)
     axios.get(`/api/products/${props.match.params.id}`).then(res => {
-        console.log('form',res.data)
+        // console.log('useEffect form',res.data)
         setName(res.data[0].name)
         setPrice(res.data[0].price)
         setImage(res.data[0].img)
@@ -19,7 +19,7 @@ useEffect(() => {
 
 
 const addProduct = () => {
-    console.log('HITT addProduct!')
+    // console.log('HITT addProduct!')
     axios.post('/api/product', {name, price, image}).then(() => {
         alert('Product Added')
     })
@@ -32,7 +32,7 @@ const addProduct = () => {
 
 
 const editProduct = () => {
-    console.log('edit Hit!')
+    // console.log('edit Hit!')
   axios.put(`/api/product/${props.match.params.id}`, {name, price, image}).then(() => {
     alert('Product Updated!')
   }).catch(res => console.log(res))
@@ -43,37 +43,45 @@ const editProduct = () => {
 // console.log('FormProps', props)
     return(
         <section className='form'>
+            
+            <div className='productForm'>
             {props.location.pathname === '/add'?
             (<div>
-                <p>Image:</p>
-                <input name='img' value={image} onChange={(e) => setImage(e.target.value)}/>
-                <p>Product:</p>
-                <input name='name' value={name} onChange={(e) => setName(e.target.value)}/>
-                <p>Price:</p>
-                <input name='price' value={price} onChange={(e) => setPrice(e.target.value)}/>
-                <div>
+                <div className='formInfo'>
+                    <p>Image:</p>
+                    <input name='img' value={image} onChange={(e) => setImage(e.target.value)}/>
+                    <p>Product:</p>
+                    <input name='name' value={name} onChange={(e) => setName(e.target.value)}/>
+                    <p>Price:</p>
+                    <input name='price' value={price} onChange={(e) => setPrice(e.target.value)}/>
+                    </div>
+                    <div className='formBtns'>
                     <Link to='/'>
-                        <button>Cancel</button>
+                    <button className='btn'>Cancel</button>
                     </Link>
-                    <button onClick={addProduct}>Add to Inventory</button>
-                </div>
-            </div>)
-               : 
+                    <button id='addBtn btn' onClick={addProduct}>Add to Inventory</button>
+                    </div>
+            </div>
+            )
+            :
             (<div>
+                <div className='formInfo'>
                 <p>Image:</p>
-                <input name='img' value={image} onChange={(e) => setImage(e.target.value)}/>
-                <p>Product:</p>
-                <input name='name' value={name} onChange={(e) => setName(e.target.value)}/>
-                <p>Price:</p>
-                <input name='price' value={price} onChange={(e) => setPrice(e.target.value)}/>
-                <div>
-                <Link to='/'>
-                        <button>Cancel</button>
-                </Link>
-                    <button onClick={editProduct}>Save</button>
+                    <input name='img' value={image} onChange={(e) => setImage(e.target.value)}/>
+                    <p>Product:</p>
+                    <input name='name' value={name} onChange={(e) => setName(e.target.value)}/>
+                    <p>Price:</p>
+                    <input name='price' value={price} onChange={(e) => setPrice(e.target.value)}/>
                 </div>
+                    <div className='formBtns'>
+                    <Link to='/'>
+                    <button className='btn'>Cancel</button>
+                    </Link>
+                    <button className='btn' onClick={editProduct}>Save</button>
+                    </div>
             </div>)
-            } 
+            }
+          </div>
       
         </section>
     )

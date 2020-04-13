@@ -3,7 +3,7 @@ import Header from './Components/Header/Header';
 import router from './routes';
 import './App.css';
 
-///NEED TO HOOK UP THE UPDATE////
+///modify useEFFECT////
 
 function App() {
 

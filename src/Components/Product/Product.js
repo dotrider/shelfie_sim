@@ -9,10 +9,15 @@ const Product = (props) => {
         <section className='products'>
             <div className='product'>
                 <img src={img}/>
-                <p>{name}</p>
-                <p>{price}</p>
-                <button onClick={() => props.deleteItem(id)} >Delete</button>
-                <Link to={`/edit/${id}`}><button>Edit</button></Link>
+                <div className='productInfo'>
+                    <p>{name}</p>
+                    <p>{price}</p>
+                </div>
+
+                <div className='buttonContainer'>
+                    <button onClick={() => props.deleteItem(id)} >Delete</button>
+                <Link to={`/edit/:id`}><button>Edit</button></Link>
+                </div>
             </div>
         </section>
     )

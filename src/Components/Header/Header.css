@@ -5,4 +5,20 @@
     text-align: left;
     padding: 20px;
     font-size: 2rem;
+    display: flex;
+    
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    padding-left: 100px;
+}
+
+span {
+    color: black;
+    background-color: rgba(249, 64, 64, 0.46);
+    border-radius: 5px;
+    display: inline-block;
 }
