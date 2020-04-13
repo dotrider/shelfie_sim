@@ -6,19 +6,22 @@
     padding: 20px;
     font-size: 2rem;
     display: flex;
-    
+    font-weight: 700;    
 }
 
 .links {
     display: flex;
-    justify-content: space-evenly;
-    width: 250px;
+    justify-content: space-between;
+    width: 350px;
     padding-left: 100px;
+    font-weight: 400;
+    font-size: 1.5rem;  
 }
 
-span {
+.mainNav {
     color: black;
-    background-color: rgba(249, 64, 64, 0.46);
+    background-color: #ED6B5A;
     border-radius: 5px;
     display: inline-block;
+    padding: 5px;
 }

@@ -8,16 +8,19 @@ const Product = (props) => {
     return(
         <section className='products'>
             <div className='product'>
-                <img src={img}/>
+                <div>
+                    <img src={img}/>
+                </div>
                 <div className='productInfo'>
-                    <p>{name}</p>
-                    <p>{price}</p>
-                </div>
-
-                <div className='buttonContainer'>
-                    <button onClick={() => props.deleteItem(id)} >Delete</button>
-                <Link to={`/edit/:id`}><button>Edit</button></Link>
-                </div>
+                    <div>
+                        <p>{name}</p>
+                        <p>${price}</p>
+                    </div>
+                    <div className='buttonContainer'>
+                        <button onClick={() => props.deleteItem(id)} >Delete</button>
+                        <Link to={`/edit/${id}`}><button>Edit</button></Link>
+                    </div>
+                </div>               
             </div>
         </section>
     )

@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 button {
   background-color: #4BDB90;
@@ -10,6 +11,8 @@ button {
   border: none;
   padding: 10px 20px;
   width: 80px;
+  font-size: .85rem;
+  font-weight: 700;
 }
 .App-logo {
   height: 40vmin;

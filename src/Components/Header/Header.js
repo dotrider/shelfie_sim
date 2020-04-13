@@ -11,8 +11,8 @@ const Header = () => {
            <h1>SHELFIE</h1>
 
            <div className='links'>
-               <Link to='/'><span>Dashboard</span></Link>
-                <Link to='/add'><span>Add</span></Link>
+               <Link to='/'><span className='mainNav'>Dashboard</span></Link>
+                <Link to='/add'><span className='mainNav'>Add Inventory</span></Link>
            </div>
         </section>
     )

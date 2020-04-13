@@ -4,7 +4,7 @@
 
 .productForm {
     background-color: #3BD786;
-    height: 200px;
+    height: 250px;
     width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -20,6 +20,7 @@
 
 .formInfo {
     padding: 20px;
+    font-size: 1.5rem;
 }
 
 .formInfo > input {
@@ -30,12 +31,11 @@
 }
 p {
     text-align: left;
-    /* padding: 5px; */
 }
 
 
-#addBtn {
-    width: 125px;
+.addBtn {
+    width: 155px;
 }
 
 .btn{

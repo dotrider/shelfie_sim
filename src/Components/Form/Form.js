@@ -15,7 +15,7 @@ useEffect(() => {
         setPrice(res.data[0].price)
         setImage(res.data[0].img)
     })   
-}, [])
+}, [props.match.params.id])
 
 
 const addProduct = () => {
@@ -59,7 +59,7 @@ const editProduct = () => {
                     <Link to='/'>
                     <button className='btn'>Cancel</button>
                     </Link>
-                    <button id='addBtn btn' onClick={addProduct}>Add to Inventory</button>
+                    <button className='addBtn btn' onClick={addProduct}>Add to Inventory</button>
                     </div>
             </div>
             )
